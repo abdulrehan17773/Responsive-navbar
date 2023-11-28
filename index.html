@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            height: 50px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        .list{
+            margin-top: 15px;
+            margin-right: 60px;
+        }
+        .lu{
+            display: flex;
+            align-items: center;
+        }
+        .lu li{
+            list-style: none;
+            margin-left: 35px;
+        }
+        .lu li a{
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;  
+        }
+        .lu li a:hover{
+            color: rgb(153, 150, 150);
+        }
+        .fa-bars{
+            margin-top: 9px;
+            margin-right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none;
+        }
+        .cont{
+            background-color: #303030;
+            height: 190px;
+            display: none;
+        }
+        .ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ul li{
+            list-style: none;
+            margin-top: 15px;
+        }
+        .ul li a{
+            color: white;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        button{
+            padding: 4px 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(181, 179, 179);
+        }
+        .container{
+            display: block;
+        }
+        @media screen and (min-width: 601px) and (max-width: 700px){
+            .list{
+                margin-right: 25px;
+            }
+        }
+        @media screen and (min-width: 501px) and (max-width: 600px){
+            .lu li a{
+            font-size: 1rem;
+        }
+        .lu li{
+            list-style: none;
+            margin-left: 32px;
+        }
+        .list{
+            margin-right: 10px;
+        }
+        .logo {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        }
+        @media screen and (max-width: 500px){
+            .list{
+            display: none;
+        }
+        .lu li a{
+            font-size: 0.01rem;
+        }
+        .fa-bars{
+            display: block;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><h2>LogistiX</h2></div>
+        <div class="list">
+        <ul class="lu">
+            <li><a href="">Services</a></li>
+            <li><a href="">Manu</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+        <i class="fas fa-bars" ></i>
+    </nav>
+    <div class="cont">
+        <ul class="ul">
+            <li><a href="">Services</a></li>
+            <li><a href="">Manu</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    let cont = document.querySelector(`.cont`)
+    let bars = document.querySelector(`.fa-bars`)
+    bars.addEventListener(`click`, () => {
+        cont.classList.toggle(`container`)
+    })
+</script>
+</html>
